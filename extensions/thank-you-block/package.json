@@ -1,0 +1,13 @@
+{
+  "name": "thank-you-block",
+  "private": true,
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "dependencies": {
+      "preact": "^10.28.0",
+    "@preact/signals": "^2.3.x",
+    "@shopify/ui-extensions": "2026.1.x"
+  }
+}
+
+

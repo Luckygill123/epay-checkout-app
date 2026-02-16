@@ -1,0 +1,27 @@
+{
+  "name": "epay-checkout-app",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "shopify": "shopify",
+    "build": "shopify app build",
+    "dev": "shopify app dev",
+    "info": "shopify app info",
+    "generate": "shopify app generate",
+    "deploy": "shopify app deploy"
+  },
+  "trustedDependencies": [
+    "@shopify/plugin-cloudflare"
+  ],
+  "author": "gilll",
+  "private": true,
+  "workspaces": [
+    "extensions/*"
+  ],
+  "dependencies": {
+    "@shopify/ui-extensions": "^2026.1.1",
+    "@shopify/ui-extensions-react": "^2025.7.3",
+    "force": "^0.0.3",
+    "preact-jsx-runtime": "^1.2.0"
+  }
+}
