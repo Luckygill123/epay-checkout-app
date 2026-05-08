@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "5b857424d502c6918b2c5ce97b0b9770"
-name = "epay-checkout-app-new"
+client_id = "de1bed0df4467f6c4eb52c96bf81b861"
+name = "epay-checkout-thankyou"
 application_url = "https://shopify.dev/apps/default-app-home"
 embedded = true
 
@@ -9,7 +9,7 @@ embedded = true
 automatically_update_urls_on_dev = true
 
 [webhooks]
-api_version = "2026-04"
+api_version = "2026-01"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
