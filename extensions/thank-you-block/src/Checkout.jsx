@@ -18,9 +18,9 @@ console.log("orderConfirmation--", shopify.orderConfirmation.current)
 console.log("lineData--", lines)
   const [data, setData] = useState(lines);
   const [error, setError] = useState(null);
-  const   productIdData  = data[0].merchandise.product.id;
- const idLength  = productIdData.split("/").length;
- const idNum = productIdData.split("/")[idLength - 1]
+//   const   productIdData  = data[0].merchandise.product.id;
+//  const idLength  = productIdData.split("/").length;
+//  const idNum = productIdData.split("/")[idLength - 1]
 const orderConfirmationId = shopify.orderConfirmation.current;
 const orderId = orderConfirmationId.order.id.split("/")[orderConfirmationId.order.id.split("/").length - 1];
 console.log("orderID00", orderId);
