@@ -651,22 +651,22 @@ app.get("/products", async (req, res) => {
     };
 
     const groupByProvider = (products) => {
-  const map = {};
+      const map = {};
 
-  for (const p of products) {
-    if (!map[p.provider]) {
-      map[p.provider] = {
-        provider: p.provider,
-        count: 0,
-        products: []
-      };
-    }
-    map[p.provider].count++;
-    map[p.provider].products.push(p);
-  }
+      for (const p of products) {
+        if (!map[p.provider]) {
+          map[p.provider] = {
+            provider: p.provider,
+            count: 0,
+            products: [],
+          };
+        }
+        map[p.provider].count++;
+        map[p.provider].products.push(p);
+      }
 
-  return Object.values(map);
-}
+      return Object.values(map);
+    };
 
     // const renderCategoryWiseCatalog = (products) => {
     //   const root = document.createElement("epay-products");
@@ -747,9 +747,9 @@ app.get("/products", async (req, res) => {
 
           if (!categoryProducts) return "";
 
-           const providers = groupByProvider(categoryProducts);
+          const providers = groupByProvider(categoryProducts);
 
-           console.log('providers00', providers)
+          console.log("providers00", providers);
 
           return `
 
@@ -765,7 +765,7 @@ app.get("/products", async (req, res) => {
             .map(
               (product) => `
 
-            <div class="epay-card">
+            <div class="epay-card"  onclick="buyNow()">
 <div class="thumbnail-img">
               <img
                 src="${product.products[0].image}"
@@ -920,8 +920,11 @@ app.get("/products", async (req, res) => {
             background: #f5f5f5;
             margin: 0;
             padding: 30px;
+            box-sizing:border-box;
           }
-
+*{
+     box-sizing:border-box;
+}
 
 
         </style>
@@ -946,7 +949,7 @@ app.get("/products", async (req, res) => {
     console.log("DOM is fully loaded and parsed");
 });
           async function buyNow(ean) {
-          console.log('eanval--', ean)
+          console.log('eanval--',)
             // Replace with real Shopify Variant ID
             const variantId = 123456789;
 
@@ -956,7 +959,7 @@ app.get("/products", async (req, res) => {
                 'Content-Type': 'application/json'
               },
               body: JSON.stringify({
-                id: ean,
+                id: 0731944723303,
                 quantity: 1
               })
             });
@@ -985,11 +988,11 @@ app.get("/products", async (req, res) => {
 
     //       <p>₹${product.price}</p>
 
-                 // <button
-              //   onclick="buyNow('${product.EAN}')"
-              // >
-              //   Buy Now
-              // </button>
+    // <button
+    //   onclick="buyNow('${product.EAN}')"
+    // >
+    //   Buy Now
+    // </button>
 
     //     </div>
 

@@ -1,23 +1,23 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "b9fc11296f0647c2cac360a245b1981a"
+name = "epay-testfis-thankyou"
 application_url = "https://example.com"
 embedded = true
-name = "epay-testfis-thankyou"
+
+[webhooks]
+api_version = "2026-01"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_app_proxy,write_app_proxy,read_orders,write_orders,read_products,write_products,read_publications,write_publications"
+optional_scopes = [ ]
+use_legacy_install_flow = true
+
+[auth]
+redirect_urls = [ ]
 
 [app_proxy]
 url = "https://epay-shopify-app-v1.vercel.app"
 subpath = "epay"
 prefix = "apps"
-
-[access_scopes]
-# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = ""
-optional_scopes = [ ]
-use_legacy_install_flow = false
-
-[auth]
-redirect_urls = [ ]
-
-[webhooks]
-api_version = "2026-01"
